@@ -4,20 +4,26 @@ Site Web anti-gaspillage alimentaire : des commerces de la région publient des 
 Projet libre du cours **8WEB101 - Conception et programmation de sites Web** (UQAC).
 
 ## Équipe
+Suzie Valentin
+Nene hassy Diallo
 
-
+## Ojectif
+Réduire le gaspillage alimentaire tout en permettant aux habitants d’accéder à des produits alimentaires à prix abordable grâce à une plateforme simple, rapide et accessible sur ordinateur comme sur téléphone.
 ## Technologies explorées
-
 - **Supabase** (https://supabase.com/) : base de données PostgreSQL, authentification avec rôles et sécurité RLS (Row Level Security)
 - **Leaflet** (https://leafletjs.com/) : cartes interactives
-- HTML, CSS et JavaScript
+- HTML
+- CSS
+-  JavaScript
 
 ## Fonctionnalités
 
 **Compte commerçant**
-- Créer, modifier et supprimer ses paniers (titre, prix, quantité, heure de ramassage)
+- Créer une compte ,
+-  créer , modifier et supprimer ses paniers (titre, prix, quantité, heure de ramassage)
 
 **Compte client**
 - Consulter les paniers sur une carte et dans une liste
 - Réserver un panier
 - Voir ses réservations
+- Cueillette 
