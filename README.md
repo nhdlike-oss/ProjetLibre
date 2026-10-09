@@ -10,6 +10,7 @@ Réduire le gaspillage alimentaire tout en permettant aux habitants d’accéder
 ## Équipe
 -Suzie Valentin
 -Nene hassy Diallo
+-Hassane Moussa Traore
 
 
 ## Technologies explorées
