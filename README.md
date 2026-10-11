@@ -21,5 +21,16 @@ Evodie Gaspard
 - CSS
 -  JavaScript
 
-## Fonctionnalités
+## Fonctionnalités Principales (a ajuster )
+Inscription et connexion 
+* Publication d'un article avec photo, titre et prix (commerçant)
+* Modification et suppression de ses propres articles (commerçant)
+* Liste des articles publiés (client)
+* Affichage horodaté des articles
+* Site utilisable sur téléphone
 
+### Fonctionnalités secondaires
+
+* Carte Leaflet avec un marqueur par commerce
+* Recherche ou filtre des articles
+* Page de profil du commerce
