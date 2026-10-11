@@ -11,6 +11,7 @@ Réduire le gaspillage alimentaire tout en permettant aux habitants d’accéder
 -Suzie Valentin
 -Nene hassy Diallo
 -Hassane Moussa Traore
+Evodie Gaspard
 
 
 ## Technologies explorées
@@ -22,12 +23,3 @@ Réduire le gaspillage alimentaire tout en permettant aux habitants d’accéder
 
 ## Fonctionnalités
 
-**Compte commerçant**
-- Créer une compte ,
--  créer , modifier et supprimer ses paniers (titre, prix, quantité, heure de ramassage)
-
-**Compte client**
-- Consulter les paniers sur une carte et dans une liste
-- Réserver un panier
-- Voir ses réservations
-- Cueillette 
