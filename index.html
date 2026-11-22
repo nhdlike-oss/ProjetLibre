@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Miam Miam - Offres anti-gaspillage</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Plus tard : <script src="script.js" defer></script> -->
+</head>
+<body>
+
+    <header class="entete">
+        <a href="index.html" class="logo">Miam Miam</a>
+
+        <form class="recherche" role="search" action="index.html" method="get">
+            <label for="recherche" class="visuellement-cache">Rechercher un article</label>
+            <input type="search" id="recherche" name="q" placeholder="Rechercher">
+            <button type="submit" aria-label="Lancer la recherche">🔍</button>
+        </form>
+
+        <button type="button" class="bouton-menu" id="bouton-menu"
+                aria-label="Ouvrir le menu" aria-expanded="false"
+                aria-controls="menu-principal">☰</button>
+
+        <nav class="menu" id="menu-principal" aria-label="Navigation principale">
+            <ul>
+                <li><a href="#">À propos</a></li>
+                <li><a href="#">Emplacements</a></li>
+                <li><a href="#">♥ Mes articles</a></li>
+                <li><a href="connexion.html">Se connecter</a></li>
+            </ul>
+        </nav>
+
+        <button type="button" class="langue" aria-label="Changer de langue">FR</button>
+    </header>
+
+    <main>
+        <section aria-labelledby="titre-offres">
+            <h1 id="titre-offres">Offres de produits</h1>
+
+            <ul class="grille-produits" id="liste-produits">
+                <li>
+                    <article class="carte-produit">
+                        <h2>Oranges</h2>
+                        <p class="prix">
+                            <strong>1,99 $</strong>
+                            <del>3,99 $</del>
+                        </p>
+                        <p class="commerce">Maxi</p>
+                        <p class="heure">
+                            <time datetime="2026-11-22T08:46">Publié à 8 h 46</time>
+                        </p>
+                        <button type="button" class="favori"
+                                aria-label="Ajouter Oranges aux favoris"
+                                aria-pressed="false">♡</button>
+                        <a class="lieu" href="#" aria-label="Voir l'emplacement du commerce">📍</a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="carte-produit">
+                        <h2>Poulet</h2>
+                        <p class="prix">
+                            <strong>1,99 $</strong>
+                            <del>3,99 $</del>
+                        </p>
+                        <p class="commerce">Super C</p>
+                        <p class="heure">
+                            <time datetime="2026-11-22T08:46">Publié à 8 h 46</time>
+                        </p>
+                        <button type="button" class="favori"
+                                aria-label="Ajouter Poulet aux favoris"
+                                aria-pressed="false">♡</button>
+                        <a class="lieu" href="#" aria-label="Voir l'emplacement du commerce">📍</a>
+                    </article>
+                </li>
+
+                <li>
+                    <article class="carte-produit">
+                        <h2>Lait</h2>
+                        <p class="prix">
+                            <strong>1,99 $</strong>
+                            <del>3,99 $</del>
+                        </p>
+                        <p class="commerce">Walmart</p>
+                        <p class="heure">
+                            <time datetime="2026-11-22T08:46">Publié à 8 h 46</time>
+                        </p>
+                        <button type="button" class="favori"
+                                aria-label="Ajouter Lait aux favoris"
+                                aria-pressed="false">♡</button>
+                        <a class="lieu" href="#" aria-label="Voir l'emplacement du commerce">📍</a>
+                    </article>
+                </li>
+            </ul>
+        </section>
+
+        <section class="detaillants" aria-labelledby="titre-detaillants">
+            <h2 id="titre-detaillants">Trouvez vos détaillants préférés</h2>
+            <button type="button" aria-label="Détaillants précédents">←</button>
+            <ul>
+                <li><a href="#">Costco</a></li>
+                <li><a href="#">Walmart</a></li>
+                <li><a href="#">Maxi</a></li>
+                <li><a href="#">Super C</a></li>
+            </ul>
+            <button type="button" aria-label="Détaillants suivants">→</button>
+        </section>
+    </main>
+
+    <footer class="pied">
+        <nav aria-label="Pied de page">
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Conditions d'utilisation</a></li>
+                <li><a href="#">Aide</a></li>
+            </ul>
+        </nav>
+        <p>&copy; 2026 Miam Miam. Tous droits réservés.</p>
+    </footer>
+
+</body>
+</html>
