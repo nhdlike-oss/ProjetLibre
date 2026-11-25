@@ -5,55 +5,76 @@
         <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
         <title>Antigaspe</title>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../accuiel.css">
     </head>
 <body>
     
-     <main class="auth" id="auth">
-        <form  class="connexion" id="formConnexion">
-            <h2>Connexion</h2>
-            <label for="emailConnexion">Courriel </label>
-            <input id="emailConnexion" name="email" type="email"placeholder="Courriel" required>
-            <br>
-            <label for="mdpConnexion">Mot de passe </label>
-         <input id="mdpConnexion" name="mdpasse" type="password" placeholder="mot de passe" required>
-         <button type="submit">Se connecter</button>
-
-        </form>
-    <form class= "enregistrer" id="forminscription">
-        <h2>Inscription</h2>
-           <label for="nom">nom</label>
-            <input id="nom" name="nom" type="text"placeholder="nom" required>
-           <label for="prenom">Prénom</label>
-            <input id="prenom" name="prenom" type="text" placeholder="prénom" required>
-
-            <label for="emailInscription">Courriel</label>
-            <input id="emailInscription" name="email" type="email" placeholder="courriel" required>
-
-            <label for="mdpInscription">Mot de passe</label>
-            <input id="mdpInscription" name="motdepasse" type="password" placeholder="mot de passe" minlength="6" required>
-  <label for="role">Je suis</label>
-            <select id="role" name="role" required>
-                <option value="commercant">Commerçant</option>
-            </select>
-
-            <button type="submit">S'inscrire</button>
-        </form>
-    </form>
-    <aside class="bienvenue">
-    <div class="panneau-inscrire">
-        <h2>Bonjour, bienvenue !</h2>
-        <p>Pas encore de compte ?</p>
-        <button type="button" id="btnInscrire">S'inscrire</button>
+    <header class="entete">
+        <a class="logo" href="index.html">NomSite</a>
+        <nav>
+            <a href="#paniers">Paniers</a>
+            <a href="#section-carte">Carte</a>
+            <a href="#comment">Comment ça marche</a>
+          
+        </nav>
+    </header>
+<main>
+     <section class="hero">
+    <div class="hero-texte">
+        <h1>Sauvez de la bonne nourriture, payez moins</h1>
+        <p>Les invendus de fin de journée des commerces du Saguenay–Lac-Saint-Jean, à prix réduit.</p>
+        <a class="bouton-principal" href="#paniers">Voir les paniers</a>
     </div>
-    <div class="panneau-connexion">
-        <h2>Re-bonjour !</h2>
-        <p>Vous avez déjà un compte ?</p>
-        <button type="button" id="btnConnexion">Se connecter</button>
-    </div>
-</aside>
-     </main>
+</section>
         
-    
-</body>
-</html>
+       <section class="commercant">
+    <h2>Vous êtes un commerce ?</h2>
+    <p>Connectez-vous ou créez un compte pour publier vos paniers et réduire vos pertes.</p>
+    <a class="btn-principal" id="btnCommercant" href="connexion.html">Espace commerçant</a>
+</section>
+      
+<section class="recherche" aria-label="Recherche">
+    <div>
+        <label for="q">Rechercher</label>
+        <input id="q" type="search" placeholder="Nom du commerce">
+    </div>
+    <div class="chips" role="group" aria-label="Type de commerce">
+        <button type="button" class="chip actif" data-type="">Tous</button>
+        <button type="button" class="chip" data-type="Boulangerie">Boulangerie</button>
+        <button type="button" class="chip" data-type="Restaurant">Restaurant</button>
+        <button type="button" class="chip" data-type="Épicerie">Épicerie</button>
+    </div>
+</section>
+             <section id="comment">
+            <h2>Comment ça marche</h2>
+            <ol class="etapes">
+                <li><strong>Les commerces publient</strong> leurs invendus de fin de journée en panier surprise.</li>
+                <li><strong>Vous choisissez</strong> un panier sur la liste ou sur la carte.</li>
+                <li><strong>Vous le récupérez</strong> au commerce à l'heure de ramassage indiquée.</li>
+            </ol>
+        </section>
+
+        <section id="carte">
+            <h2>liste des commerces sur la carte </h2>
+            <div id="carte"></div>
+        </section>
+
+        <section id="paniers">
+            <h2>Paniers disponibles</h2>
+            <div id="liste-paniers" class="grille"></div>
+            <p id="aucun" class="aucun" hidden>Aucun panier ne correspond à votre recherche.</p>
+        </section>
+
+
+    </main>
+
+    <footer class="pied">
+        <nav>
+            <a href="#">Services</a>
+            <a href="#">Confidentialité</a>
+            <a href="#">Conditions d'utilisation</a>
+            <a href="#">Aide</a>
+        </nav>
+        <p>© 2026 NomSite. Tous droits réservés.</p>
+    </footer>
+

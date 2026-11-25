@@ -1,0 +1,195 @@
+:root {
+    --creme: #FFF6E9;
+    --vert: #2F6B4F;
+    --vert-fonce: #24543E;
+    --vert-pale: #E3F0E6;
+    --vert-clair: #9CCBAE;
+    --orange: #C2410C;
+    --orange-fonce: #9A3309;
+    --texte: #1F2D24;
+    --gris: #4F5A54;
+    --bordure: #E5DDCF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--creme);
+    color: var(--texte);
+}
+
+a { color: var(--vert); }
+
+/* En-tête */
+.entete {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 16px 5vw;
+    background: white;
+    border-bottom: 1px solid var(--bordure);
+}
+.logo { font-size: 22px; font-weight: bold; text-decoration: none; }
+.entete nav { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
+.entete nav a { color: var(--texte); text-decoration: none; }
+
+.bouton-connexion {
+    background: var(--vert);
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.bouton-principal {
+    display: inline-block;
+    background: var(--orange);
+    color: white;
+    padding: 14px 28px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+.bouton-principal:hover { background: var(--orange-fonce); }
+
+main { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
+section { margin-top: 48px; }
+h2 { color: var(--vert); font-size: 26px; margin: 0 0 16px; }
+
+/* Bannière */
+.banniere {
+    margin-top: 32px;
+    min-height: 340px;
+    padding: 48px;
+    display: flex;
+    align-items: center;
+    border-radius: 24px;
+    color: white;
+    background: linear-gradient(135deg, var(--vert-fonce), var(--vert));
+}
+.banniere-texte { max-width: 520px; }
+.banniere h1 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; }
+.banniere p { margin: 0 0 24px; font-size: 18px; }
+
+/* Recherche et filtres */
+.recherche {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 20px;
+    background: white;
+    border: 1px solid var(--bordure);
+    border-radius: 16px;
+}
+.champ { flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; }
+label { font-size: 14px; font-weight: bold; }
+input {
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #8FA597;
+    border-radius: 10px;
+    font-size: 16px;
+    background: white;
+}
+input:focus { outline: 3px solid var(--vert-clair); border-color: var(--vert); }
+
+.pastilles { display: flex; flex-wrap: wrap; gap: 8px; }
+.pastille {
+    padding: 11px 20px;
+    border: 1px solid #8FA597;
+    border-radius: 999px;
+    background: white;
+    color: var(--texte);
+    font-size: 15px;
+    cursor: pointer;
+}
+.pastille.active { background: var(--vert); border-color: var(--vert); color: white; }
+
+/* Carte */
+#carte {
+    height: 420px;
+    border: 1px solid #C9D4CB;
+    border-radius: 16px;
+}
+
+/* Paniers */
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
+.panier {
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: white;
+    border: 1px solid var(--bordure);
+    border-radius: 14px;
+}
+.panier .type {
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--vert-pale);
+    color: var(--vert-fonce);
+    font-size: 12px;
+    font-weight: bold;
+}
+.panier h3 { margin: 0; font-size: 18px; }
+.panier .ville { margin: 0; color: var(--gris); font-size: 14px; }
+.panier .prix { font-size: 24px; font-weight: bold; color: var(--orange); }
+.panier .ancien { margin-left: 8px; color: var(--gris); font-size: 14px; text-decoration: line-through; }
+.panier .infos { display: flex; justify-content: space-between; font-size: 14px; }
+.aucun-resultat { color: var(--gris); }
+
+/* Comment ça marche */
+.etapes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 16px;
+    padding: 0;
+    list-style: none;
+    counter-reset: etape;
+}
+.etapes li {
+    counter-increment: etape;
+    padding: 20px;
+    background: white;
+    border: 1px solid var(--bordure);
+    border-radius: 14px;
+}
+.etapes li::before {
+    content: counter(etape);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    margin-bottom: 10px;
+    border-radius: 50%;
+    background: var(--vert);
+    color: white;
+    font-weight: bold;
+}
+
+/* Appel aux commerces */
+.commerce {
+    padding: 40px 16px;
+    text-align: center;
+    background: var(--vert);
+    color: white;
+    border-radius: 24px;
+}
+.commerce h2 { color: white; }
+
+/* Pied de page */
+.pied {
+    padding: 28px 16px;
+    text-align: center;
+    background: white;
+    border-top: 1px solid var(--bordure);
+    font-size: 14px;
+}
+.pied nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-bottom: 12px; }
+.pied a { color: var(--texte); }
