@@ -1,17 +1,19 @@
 :root
- {
-    --bleu: #87CEEB;
-    --bleu-fonce: #1B6F96;
-    --texte: #0F3B52;
-    --rouge: #C0392B;
-     }
+ {--creme: #FFF6E9;
+    --vert: #2F6B4F;
+    --vert-fonce: #24543E;
+    --vert-clair: #9CCBAE;
+    --orange: #C2410C;
+    --orange-fonce: #9A3309;
+    --texte: #1F2D24;
+    }
 body {
     margin: 0;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--bleu);
+    background-color: var(--creme);
     font-family: Arial, sans-serif;
     color: var(--texte);
 }
@@ -23,8 +25,10 @@ body {
     background: white;
     border-radius: 24px;
     overflow: hidden;
-    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
-}.connexion,
+    box-shadow: 0 14px 40px rgba(31, 45, 36, 0.18);
+}
+
+.connexion,
 .enregistrer {
     position: absolute;
     top: 0;
@@ -46,7 +50,7 @@ body {
 }
 form h2 {
     margin: 0 0 12px;
-    color: var(--bleu-fonce);
+    color: var(--vert);
 }
 
 label {
@@ -58,7 +62,7 @@ input,
 select {
     height: 44px;
     padding: 0 12px;
-    border: 1px solid #7f9aa8;
+    border: 1px solid#8FA597;
     border-radius: 10px;
     background: white;
     color: var(--texte);
@@ -67,8 +71,8 @@ select {
 
 input:focus,
 select:focus {
-    outline: 3px solid var(--bleu);
-    border-color: var(--bleu-fonce);
+    outline: 3px solid var(--vert-clair);
+    border-color: var(--vert);
 }
 
 form button {
@@ -76,12 +80,12 @@ form button {
     margin-top: 8px;
     border: 0;
     border-radius: 10px;
-    background: var(--bleu-fonce);
+    background: var(--vert);
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
-form button:hover { background: #14566f; }
+form button:hover { background: #24543E; }
 
 .bienvenue {
     position: absolute;
@@ -91,7 +95,7 @@ form button:hover { background: #14566f; }
     height: 100%;
     box-sizing: border-box;
     padding: 48px;
-    background: var(--bleu);
+    background: var(--vert);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -112,14 +116,14 @@ form button:hover { background: #14566f; }
     padding: 0 28px;
     border: 0;
     border-radius: 10px;
-    background: var(--rouge);
+    background: var(--orange);
     color: white;
     font-size: 16px;
     cursor: pointer;
 }
-.bienvenue button:hover { background: #a02f23; }
+.bienvenue button:hover { background: var(--orange-fonce) }
 
-.erreur { color: var(--rouge); font-size: 14px; }
+.erreur { color: var(--orange); font-size: 14px; }
 
 /* Téléphone */
 @media (max-width: 700px) {
