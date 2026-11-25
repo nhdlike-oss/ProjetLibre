@@ -5,7 +5,6 @@
     --texte: #0F3B52;
     --rouge: #C0392B;
      }
-
 body {
     margin: 0;
     min-height: 100vh;
@@ -15,8 +14,8 @@ body {
     background-color: var(--bleu);
     font-family: Arial, sans-serif;
     color: var(--texte);
-    }
-    .auth {
+}
+.auth {
     position: relative;
     width: 960px;
     max-width: 95vw;
@@ -25,4 +24,120 @@ body {
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
- }   
+}.connexion,
+.enregistrer {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 48px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+.connexion { left: 0; }
+.enregistrer { left: 50%; }
+
+.auth:not(.mode-inscription) .enregistrer,
+.auth.mode-inscription .connexion {
+    visibility: hidden;
+}
+form h2 {
+    margin: 0 0 12px;
+    color: var(--bleu-fonce);
+}
+
+label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+input,
+select {
+    height: 44px;
+    padding: 0 12px;
+    border: 1px solid #7f9aa8;
+    border-radius: 10px;
+    background: white;
+    color: var(--texte);
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 3px solid var(--bleu);
+    border-color: var(--bleu-fonce);
+}
+
+form button {
+    height: 46px;
+    margin-top: 8px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--bleu-fonce);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+form button:hover { background: #14566f; }
+
+.bienvenue {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 48px;
+    background: var(--bleu);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    transition: left 0.5s ease;
+}
+.auth.mode-inscription .bienvenue { left: 0; }
+
+.panneau-connexion { display: none; }
+.auth.mode-inscription .panneau-inscrire { display: none; }
+.auth.mode-inscription .panneau-connexion { display: block; }
+
+.bienvenue h2 { margin: 0 0 8px; }
+
+.bienvenue button {
+    margin-top: 16px;
+    height: 46px;
+    padding: 0 28px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--rouge);
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+.bienvenue button:hover { background: #a02f23; }
+
+.erreur { color: var(--rouge); font-size: 14px; }
+
+/* Téléphone */
+@media (max-width: 700px) {
+    .auth {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    .connexion,
+    .enregistrer,
+    .bienvenue {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 32px 24px;
+    }
+    .auth:not(.mode-inscription) .enregistrer,
+    .auth.mode-inscription .connexion {
+        display: none;
+    }
+}
