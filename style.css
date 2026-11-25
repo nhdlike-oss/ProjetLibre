@@ -1,7 +1,28 @@
-body{
-    background-color: rgb(119, 226, 190);fron-family:Arial}
-    .auth{
-        position:relative; width: 960px;height: 620px;
-        background:white; overflow:hidden;
-        border-radius: 24px; box-shadow:0 14px 40px #002;
+:root
+ {
+    --bleu: #87CEEB;
+    --bleu-fonce: #1B6F96;
+    --texte: #0F3B52;
+    --rouge: #C0392B;
+     }
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bleu);
+    font-family: Arial, sans-serif;
+    color: var(--texte);
     }
+    .auth {
+    position: relative;
+    width: 960px;
+    max-width: 95vw;
+    height: 620px;
+    background: white;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 14px 40px rgba(0, 0, 0, 0.2);
+ }   
