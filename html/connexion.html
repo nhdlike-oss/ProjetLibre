@@ -18,20 +18,33 @@
             <label for="mdpConnexion">Mot de passe </label>
          <input id="mdpConnexion" name="mdpasse" type="password" placeholder="mot de passe" required>
         
+  <div class="options">
+                <label class="souvenir" for="souvenir">
+                    <input id="souvenir" name="souvenir" type="checkbox"> Se souvenir de moi
+                </label>
+                <a href="modifier_changer_mdp.html">Mot de passe oublié ?</a>
+            </div>
 
-          <label>
-            <input type="checkbox" name="souvenir"> Se souvenir
-        </label>
-        <a href="mot_de_pass_oublier.html">Mot de passe oublier</a>
          <button type="submit">Se connecter</button>
          <a class="retour" href="../index.html">← Retour à l'accueil</a>
        
         </form>
-    <form class= "enregistrer" id="forminscription">
-        <h2>Inscription</h2>
-           <label for="nom">nom</label>
-            <input id="nom" name="nom" type="text"placeholder="nom" required>
-           <label for="prenom">Prénom</label>
+
+           <aside class="bienvenue">
+            <div class="panneau-inscrire">
+        <h2>Bonjour, bienvenue !</h2>
+            <p>Pas encore de compte ?</p>
+           <button type="button" id="boutonInscrire">S'inscrire</button>
+             </div>
+        </aside>
+
+        <form class="enregistrer" id="formInscription" hidden>
+            <h2>Inscription commerçant</h2>
+
+            <label for="nom">Nom</label>
+            <input id="nom" name="nom" type="text" placeholder="nom" required>
+
+            <label for="prenom">Prénom</label>
             <input id="prenom" name="prenom" type="text" placeholder="prénom" required>
 
             <label for="emailInscription">Courriel</label>
@@ -39,29 +52,14 @@
 
             <label for="mdpInscription">Mot de passe</label>
             <input id="mdpInscription" name="motdepasse" type="password" placeholder="mot de passe" minlength="6" required>
-  <label for="role">Je suis</label>
-            <select id="role" name="role" required>
-                <option value="commercant">Commerçant</option>
-            </select>
+
+            <input id="role" name="role" type="hidden" value="commercant">
 
             <button type="submit">S'inscrire</button>
         </form>
-    </form>
-    <aside class="bienvenue">
-    <div class="panneau-inscrire">
-        <h2>Bonjour, bienvenue !</h2>
-        <p>Pas encore de compte ?</p>
-        <button type="button" id="boutonInscrire">S'inscrire</button>
-    </div>
-    <div class="panneau-connexion">
-        <h2>Re-bonjour !</h2>
-        <p>Vous avez déjà un compte ?</p>
-        <button type="button" id="boutonConnexion">Se connecter</button>
-    </div>
-   
-</aside>
-     </main>
-        
-    
+
+    </main>
+
+
 </body>
 </html>

@@ -10,37 +10,47 @@
 <body>
     
     <header class="entete">
-        <a class="logo" href="index.html">NomSite</a>
-        <nav>
-           
-            <a href="#section-carte">Carte</a>
-            <a href="#comment">Comment ça marche</a>
-          
-        </nav>
-    </header>
+        <a class="logo" href="index.html">Saguenay–Lac-Saint-Jean</a>
+
+        <div class="barre-recherche" role="search">
+    <label for="recherche" class="cache">Rechercher un commerce</label>
+    <input id="recherche" type="search" placeholder="Rechercher">
+</div>
+    <nav>
+        <a href="#paniers">Paniers</a>
+        <a href="#section-carte">Carte</a>
+        <a href="#fonctionnement">Aide</a>
+        <a href="#Cueillette">Favoris</a>
+     
+    </nav>
+</header>
 <main>
-     <section class="banniere">
+   <section class="banniere">
+    <span class="banniere-mot">ZeroPerdu</span>
+
     <div class="banniere-texte">
+    
         <h1>Sauvez de la bonne nourriture, payez moins</h1>
         <p>Les invendus de fin de journée des commerces du Saguenay–Lac-Saint-Jean, à prix réduit.</p>
+            <p class="badge">Ramassage le jour même</p>
         <a class="bouton-principal" href="#paniers">Voir les paniers</a>
+    </div>
+
+   
+    </aside>
+</section>
+<section id="categories">
+    <h2>Catégories populaires</h2>
+    <div class="categories">
+        <button type="button" class="categorie" data-type="Boulangerie">Boulangerie</button>
+        <button type="button" class="categorie" data-type="Restaurant">Restaurant</button>
+        <button type="button" class="categorie" data-type="Épicerie">Épicerie</button>
     </div>
 </section>
       
- 
-        <section class="recherche" aria-label="Recherche">
-            <div class="champ">
-                <label for="recherche">Rechercher</label>
-                <input id="recherche" type="search" placeholder="Nom du commerce">
-            </div>
-            <div class="pastilles" role="group" aria-label="Type de commerce">
-                <button type="button" class="pastille active" data-type="">Tous</button>
-                <button type="button" class="pastille" data-type="Boulangerie">Boulangerie</button>
-                <button type="button" class="pastille" data-type="Restaurant">Restaurant</button>
-                <button type="button" class="pastille" data-type="Épicerie">Épicerie</button>
-            </div>
+
         </section>
-             <section id="comment">
+             <section id="fonctionnement">
             <h2>Comment ça marche</h2>
             <ol class="etapes">
                 <li><strong>Les commerces publient</strong> leurs invendus de fin de journée en panier surprise.</li>
@@ -60,6 +70,12 @@
             <div id="liste-paniers" class="grille"></div>
             <p id="aucun-resultat" class="aucun-resultat" hidden>Aucun panier ne correspond à votre recherche.</p>
         </section>
+         <section id="Cueillette">
+            <h2>Mes favoris</h2>
+
+
+
+         </section>
 
 
         <section class="commerce">

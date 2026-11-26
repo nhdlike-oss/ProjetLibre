@@ -57,64 +57,104 @@ a { color: var(--vert); }
 main { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
 section { margin-top: 48px; }
 h2 { color: var(--vert); font-size: 26px; margin: 0 0 16px; }
-
-/* Bannière */
 .banniere {
+    position: relative;
+    overflow: hidden;
     margin-top: 32px;
-    min-height: 340px;
+    min-height: 520px;
     padding: 48px;
-    display: flex;
-    align-items: center;
-    border-radius: 24px;
-    color: white;
-    background: linear-gradient(135deg, var(--vert), #2A7F52);
-}
-.banniere-texte { max-width: 520px; }
-.banniere h1 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; }
-.banniere p { margin: 0 0 24px; font-size: 18px; }
-
-/* Recherche et filtres */
-.recherche {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
-    gap: 16px;
-    padding: 20px;
-    background: white;
-    border: 1px solid var(--bordure);
-    border-radius: 16px;
+    justify-content: space-between;
+    gap: 24px;
+    border-radius: 24px;
+    color: white;
+    background: linear-gradient(160deg, var(--vert-fonce), var(--vert) 55%, #3E9A68);
 }
-.champ { flex: 1 1 220px; display: flex; flex-direction: column; gap: 6px; }
-label { font-size: 14px; font-weight: bold; }
-input {
-    height: 44px;
-    padding: 0 12px;
-    border: 1px solid #7B8F82;
-    border-radius: 10px;
-    font-size: 16px;
-    background: white;
-}
-input:focus { outline: 3px solid var(--vert-clair); border-color: var(--vert); }
 
-.pastilles { display: flex; flex-wrap: wrap; gap: 8px; }
-.pastille {
-    padding: 11px 20px;
-    border: 1px solid #7B8F82;
+.banniere-mot {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: clamp(80px, 16vw, 190px);
+    font-weight: bold;
+    line-height: 1;
+    white-space: nowrap;
+    color: rgba(255, 255, 255, 0.16);
+    pointer-events: none;
+    user-select: none;
+}
+
+.banniere-texte {
+    position: relative;
+    max-width: 460px;
+    margin-top: 200px;
+}
+.banniere h1 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; }
+.banniere p { margin: 0 0 24px; font-size: 18px; }
+.banniere .badge {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 6px 14px;
     border-radius: 999px;
     background: white;
-    color: var(--texte);
-    font-size: 15px;
-    cursor: pointer;
+    color: var(--vert-fonce);
+    font-size: 14px;
+    font-weight: bold;
 }
-.pastille.active { background: var(--vert); border-color: var(--vert); color: white; }
 
-/* Carte */
-#carte {
-    height: 420px;
+.banniere-carte {
+    position: relative;
+    min-width: 200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    background: white;
+    color: var(--texte);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+.etiquette {
+    align-self: flex-start;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--vert-pale);
+    color: var(--vert-fonce);
+    font-size: 12px;
+    font-weight: bold;
+}
+.prix-exemple { font-size: 22px; font-weight: bold; color: var(--orange); }
+.ancien-exemple { margin-left: 6px; color: var(--gris); font-size: 14px; text-decoration: line-through; }
+
+/* Catégories */
+.categories { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.categorie {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    background: white;
     border: 1px solid var(--bordure);
     border-radius: 16px;
+    color: var(--texte);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
 }
-
+.categorie:hover { border-color: var(--vert); }
+.categorie svg {
+    width: 48px;
+    height: 48px;
+    fill: none;
+    stroke: var(--vert);
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
 /* Paniers */
 .grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 24px; }
 .panier {
@@ -192,3 +232,30 @@ input:focus { outline: 3px solid var(--vert-clair); border-color: var(--vert); }
 }
 .pied nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 24px; margin-bottom: 12px; }
 .pied a { color: var(--texte); }
+
+.barre-recherche 
+ 
+    { flex: 1 1 260px;
+         max-width: 480px; }
+.barre-recherche input {
+    width: 100%;
+    height: 44px;
+    padding: 0 20px;
+    border: 0;
+    border-radius: 999px;
+    background: white;
+    color: var(--texte);
+font-size: 16px;
+    outline: none;
+}
+
+.barre-recherche input:focus {
+    box-shadow: 0 0 0 3px var(--vert-clair);
+}
+.cache {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+}
