@@ -1,14 +1,14 @@
 :root {
-    --creme: #FFF6E9;
-    --vert: #2F6B4F;
-    --vert-fonce: #24543E;
-    --vert-pale: #E3F0E6;
-    --vert-clair: #9CCBAE;
+    --creme: #F4E4C1;
+    --vert: #1E6B45;
+    --vert-fonce: #14492F;
+    --vert-pale: #CFE8D5;
+    --vert-clair: #7FBF99;
     --orange: #C2410C;
     --orange-fonce: #9A3309;
-    --texte: #1F2D24;
-    --gris: #4F5A54;
-    --bordure: #E5DDCF;
+    --texte: #14231B;
+    --gris: #3F4B44;
+    --bordure: #D9C9A3;
 }
 
 * { box-sizing: border-box; }
@@ -30,16 +30,14 @@ a { color: var(--vert); }
     justify-content: space-between;
     gap: 12px;
     padding: 16px 5vw;
-    background: var(--creme);
-    border-bottom: 1px solid var(--bordure);
+    background: var(--vert-fonce);
 }
-.logo { font-size: 22px; font-weight: bold; text-decoration: none; }
+.logo { font-size: 22px; font-weight: bold; color: white; text-decoration: none; }
 .entete nav { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; }
-.entete nav a { color: var(--texte); text-decoration: none; }
+.entete nav a { color: white; text-decoration: none; }
 
 .bouton-connexion {
-    background: var(--vert);
-    color: white !important;
+    background: var(--orange);
     padding: 10px 20px;
     border-radius: 10px;
 }
@@ -53,7 +51,8 @@ a { color: var(--vert); }
     text-decoration: none;
     font-weight: bold;
 }
-.bouton-principal:hover { background: var(--orange-fonce); }
+.bouton-principal:hover,
+.bouton-connexion:hover { background: var(--orange-fonce); }
 
 main { max-width: 1100px; margin: 0 auto; padding: 0 20px 40px; }
 section { margin-top: 48px; }
@@ -68,7 +67,7 @@ h2 { color: var(--vert); font-size: 26px; margin: 0 0 16px; }
     align-items: center;
     border-radius: 24px;
     color: white;
-    background: linear-gradient(135deg, var(--vert-fonce), var(--vert));
+    background: linear-gradient(135deg, var(--vert), #2A7F52);
 }
 .banniere-texte { max-width: 520px; }
 .banniere h1 { margin: 0 0 12px; font-size: clamp(30px, 5vw, 46px); line-height: 1.1; }
@@ -90,7 +89,7 @@ label { font-size: 14px; font-weight: bold; }
 input {
     height: 44px;
     padding: 0 12px;
-    border: 1px solid #8FA597;
+    border: 1px solid #7B8F82;
     border-radius: 10px;
     font-size: 16px;
     background: white;
@@ -100,7 +99,7 @@ input:focus { outline: 3px solid var(--vert-clair); border-color: var(--vert); }
 .pastilles { display: flex; flex-wrap: wrap; gap: 8px; }
 .pastille {
     padding: 11px 20px;
-    border: 1px solid #8FA597;
+    border: 1px solid #7B8F82;
     border-radius: 999px;
     background: white;
     color: var(--texte);
@@ -112,7 +111,7 @@ input:focus { outline: 3px solid var(--vert-clair); border-color: var(--vert); }
 /* Carte */
 #carte {
     height: 420px;
-    border: 1px solid #C9D4CB;
+    border: 1px solid var(--bordure);
     border-radius: 16px;
 }
 
@@ -177,7 +176,7 @@ input:focus { outline: 3px solid var(--vert-clair); border-color: var(--vert); }
 .commerce {
     padding: 40px 16px;
     text-align: center;
-    background: var(--vert);
+    background: var(--vert-fonce);
     color: white;
     border-radius: 24px;
 }

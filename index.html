@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
-        <title>Antigaspe</title>
+        <title>Antigaspe-Accueil</title>
         <link rel="stylesheet" href="accuiel.css">
     </head>
 <body>
@@ -12,39 +12,34 @@
     <header class="entete">
         <a class="logo" href="index.html">NomSite</a>
         <nav>
-            <a href="#paniers">Paniers</a>
+           
             <a href="#section-carte">Carte</a>
             <a href="#comment">Comment ça marche</a>
           
         </nav>
     </header>
 <main>
-     <section class="hero">
-    <div class="hero-texte">
+     <section class="banniere">
+    <div class="banniere-texte">
         <h1>Sauvez de la bonne nourriture, payez moins</h1>
         <p>Les invendus de fin de journée des commerces du Saguenay–Lac-Saint-Jean, à prix réduit.</p>
         <a class="bouton-principal" href="#paniers">Voir les paniers</a>
     </div>
 </section>
-        
-       <section class="commercant">
-    <h2>Vous êtes un commerce ?</h2>
-    <p>Connectez-vous ou créez un compte pour publier vos paniers et réduire vos pertes.</p>
-    <a class="btn-principal" id="btnCommercant" href="connexion.html">Espace commerçant</a>
-</section>
       
-<section class="recherche" aria-label="Recherche">
-    <div>
-        <label for="q">Rechercher</label>
-        <input id="q" type="search" placeholder="Nom du commerce">
-    </div>
-    <div class="chips" role="group" aria-label="Type de commerce">
-        <button type="button" class="chip actif" data-type="">Tous</button>
-        <button type="button" class="chip" data-type="Boulangerie">Boulangerie</button>
-        <button type="button" class="chip" data-type="Restaurant">Restaurant</button>
-        <button type="button" class="chip" data-type="Épicerie">Épicerie</button>
-    </div>
-</section>
+ 
+        <section class="recherche" aria-label="Recherche">
+            <div class="champ">
+                <label for="recherche">Rechercher</label>
+                <input id="recherche" type="search" placeholder="Nom du commerce">
+            </div>
+            <div class="pastilles" role="group" aria-label="Type de commerce">
+                <button type="button" class="pastille active" data-type="">Tous</button>
+                <button type="button" class="pastille" data-type="Boulangerie">Boulangerie</button>
+                <button type="button" class="pastille" data-type="Restaurant">Restaurant</button>
+                <button type="button" class="pastille" data-type="Épicerie">Épicerie</button>
+            </div>
+        </section>
              <section id="comment">
             <h2>Comment ça marche</h2>
             <ol class="etapes">
@@ -54,18 +49,24 @@
             </ol>
         </section>
 
-        <section id="carte">
+        <section id="section-carte">
             <h2>liste des commerces sur la carte </h2>
             <div id="carte"></div>
         </section>
 
+       
         <section id="paniers">
             <h2>Paniers disponibles</h2>
             <div id="liste-paniers" class="grille"></div>
-            <p id="aucun" class="aucun" hidden>Aucun panier ne correspond à votre recherche.</p>
+            <p id="aucun-resultat" class="aucun-resultat" hidden>Aucun panier ne correspond à votre recherche.</p>
         </section>
- 
 
+
+        <section class="commerce">
+            <h2>Vous êtes un commerce ?</h2>
+            <p>Connectez-vous ou créez un compte pour publier vos paniers et réduire vos pertes.</p>
+            <a class="bouton-principal" href="html/connexion.html">Espace commerçant</a>
+        </section>
          
 
     </main>

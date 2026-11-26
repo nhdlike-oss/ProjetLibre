@@ -13,7 +13,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: var(--vert-clair);
+    background-color: var(--creme);
     font-family: Arial, sans-serif;
     color: var(--texte);
 }
@@ -22,7 +22,7 @@ body {
     width: 960px;
     max-width: 95vw;
     height: 620px;
-    background: white;
+    background:var(--creme);
     border-radius: 24px;
     overflow: hidden;
     box-shadow: 0 14px 40px rgba(31, 45, 36, 0.18);
@@ -145,3 +145,14 @@ form button:hover { background: #88b39f; }
         display: none;
     }
 }
+.options {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 14px;
+}
+.souvenir { display: flex; align-items: center; gap: 8px; font-weight: normal; }
+input[type="checkbox"] { width: 18px; height: 18px; padding: 0; accent-color: var(--vert); }
+.retour { margin-top: 8px; font-size: 14px; color: var(--vert); }
