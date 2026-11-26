@@ -30,7 +30,7 @@ a { color: var(--vert); }
     justify-content: space-between;
     gap: 12px;
     padding: 16px 5vw;
-    background: white;
+    background: var(--creme);
     border-bottom: 1px solid var(--bordure);
 }
 .logo { font-size: 22px; font-weight: bold; text-decoration: none; }
